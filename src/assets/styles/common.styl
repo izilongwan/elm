@@ -1,0 +1,53 @@
+@import 'variables.styl';
+@import 'mixins.styl';
+
+html,
+body,
+.app,
+.container {
+  height: 100%;
+  font-family : arial, "微软雅黑";
+  touch-action: none;
+  scroll-behavior: smooth;
+  overflow hidden;
+}
+
+.container {
+  flex-column();
+  position : relative;
+  background-color: $containerBg;
+  font-size : 1.4rem;
+}
+
+.child-container {
+  position : absolute;
+  top : 0;
+  left : 0;
+  right : 0;
+  bottom : $tabHeight;
+  background-color: $childContainerBg;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.mint-indicator-wrapper {
+  z-index: 3;
+}
+
+.mint-toast {
+  z-index: 9999;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity 0
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
